@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-size: 18px;
+      line-height: 2;
+      max-width: 640px;
+      margin: 60px auto;
+      padding: 0 24px;
+      color: #1a1a1a;
+      background: #fff;
+    }
+
+    img {
+  position: fixed;
+  max-width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  transition: opacity 1s ease;
+}
+    h1 {
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1.25rem;
+    }
+
+    .hidden {
+      color: #fff;
+      cursor: default;
+      transition: color 0.3s ease;
+      user-select: none;
+      background: none;
+      border:none;
+      padding: 0;
+    }
+
+   
+    .hidden:hover {
+      color: #ad1a1a;
+      background: revert;
+      border: revert;
+      padding: revert;
+      cursor: pointer;
+    }
+
+    .hidden:hover .highlight {
+      background: black;
+    }
+
+      .hidden:hover .hidden {
+    color: #ad1a1a;
+    background: revert;
+    border: revert;
+    padding: revert;
+  }
+  </style>
+</head>
+<body>
+
+  <h1>Who Am I?</h1>
+  <p>
+<b>By: Cheryl Li</b> <br>
+  <b>DXARTS 200A: Assignment #2</b>
+  </p>
+  
+
+  <p>
+    I am Asian <span class="hidden">American</span> with <span class="hidden">first-generation </span> Chinese <span class="hidden">immigrant </span> parents. 
+    My parents knew not of freedom, only sacrifice. <span class="hidden">I know of freedom. I am <b>privileged</b>. 
+</span>
+  </p>
+
+  <p>
+    <span class="hidden">My mii at age 7 had blonde pigtails and big blue eyes. Pale, white skin. 
+    A reflection of everyone in my class but me. </span>I<span class="hidden"> knew early on what it meant to be <b>different</b>. I also </span>knew<span class="hidden"> what it meant to be <b>different</b> from </span>what was expected of me. 
+
+  </p>
+
+  <p>
+    First, I wanted to be a <button onclick="showImg('vet')">vet</button>. <span class="hidden">I would be dressed in blue scrubs, carry a stethoscope, 
+    and spend hours with animals. I’d have a nice, hot cup of black coffee every morning as 
+    I ride my bike to the animal clinic, ready to spend a day with dogs, cats, or maybe even 
+    an exotic parrot. I’d give the new puppy a pup cup after their set of vaccination shots and 
+    give old Megatron the cat extra cuddles each time he comes in, knowing I’m doing my best at 
+    suppressing his cancer. But </span>“You’ll be making pennies” was what my parents said. I understood<span class="hidden">, 
+    <b class = "highlight">“You shouldn’t do that.”</b></span>
+
+  </p>
+
+  <p>
+    Second, I wanted to be a <button onclick="showImg('teacher')">teacher</button>. <span class="hidden"> I would stand in front of children and share knowledge with them for eight hours a day to see the lightbulbs in their heads turn on at the same time as their toothy grin. I would decorate my classroom with bright, rainbow colors and use a sparkly finger pointer when presenting at the front board. My students would be let out five minutes early for lunch and recess. But </span>
+    “Why would you want to be a teacher?” was what my parents questioned. I understood<span class="hidden">, 
+    <b class = "highlight">“You shouldn’t do that.”</b></span>
+  </p>
+
+   <p>
+    Third, I wanted to be a <button onclick="showImg('fashion')">fashion designer</button>.<span class="hidden"> I would sketch up fancy ballgowns, adorned with the finest jewels in the world. I’d get to travel the world and meet models and designers all over, bonding over our passion in exploring foreign fashion design. I’d dress up and admire my designs walk runways, gaining recognition and fame worldwide. I’d be a superstar.</span>
+    But <span class="hidden">I didn’t tell my parents about this dream, because</span> I <span class = "hidden">already</span> understood “I can't do this.”
+
+  </p>
+
+   <p>
+    Fourth,<span class="hidden"> I tried to be a </span> <button onclick="showImg('doc')">doctor.</button> I studied biology and chemistry hard. I volunteered at my local hospital. I'd interacted with my patients with the biggest, reassuring smile. I’d be doing patient rounds, writing doctor’s notes, and telling patients' family members that surgery was successful. I’d dedicate my life to crucial surgeries, curing diseases, and medical research. I would dedicate my life to saving others’ lives,
+    <span class="hidden">an exchange of my life to chase someone else’s dream. Maybe one day, </span> I’d be proud of myself <span class="hidden">for making my parents proud. But </span>I<span class="hidden"> already </span> understood understood “I should<span class="hidden">n't </span>do this" because my heart was<span class="hidden">n't </span>in it.
+  </p>
+
+  <p>
+    <span class = "hidden"> <b class = "highlight"> But what was my heart in?</b></span>
+  </p>
+
+  <img id="vet" src="vet.jpg" style="display:none">
+  <img id="fashion" src="fashion.png" style="display:none">
+  <img id="doc" src="sci.jpg" style="display:none">
+  <img id="teacher" src="teacher.png" style="display:none">
+
+<script>
+  function showImg(name) {
+  const img = document.getElementById(name);
+  img.style.opacity = '1';
+  img.style.display = 'block';
+  setTimeout(() => img.style.opacity = '0', 300);
+  setTimeout(() => img.style.display = 'none', 700);
+}
+</script>
+
+  
+
+</body>
+</html>
